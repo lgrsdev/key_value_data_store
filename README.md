@@ -5,23 +5,23 @@ assignment
 Please implement a key-value data store server, which holds a list of values per key.
  
 •         The keys are from type string</br>
-•         The values are a list of strings
-•         The server should accept connections via a custom (non HTTP) protocol over TCP
-•         The server should have persist the data into the file system
+•         The values are a list of strings</br>
+•         The server should accept connections via a custom (non HTTP) protocol over TCP</br>
+•         The server should have persist the data into the file system</br>
 •         The server should be able to cache the key-value data in memory, so not every request will go all the way into the disk (for performance reasons)
 
 It’s API includes:
  
-•         getAllKeys(String pattern) – Returns all keys matching pattern.
-•         rightAdd(String K, String V) – adds a value to key K, from the right
-•         leftAdd(String K, String V) – adds a value to key K, from the left
-•         set(String K, List<String> V)
-•         get(String K) – gets a list by its key
+•         getAllKeys(String pattern) – Returns all keys matching pattern.</br>
+•         rightAdd(String K, String V) – adds a value to key K, from the right</br>
+•         leftAdd(String K, String V) – adds a value to key K, from the left</br>
+•         set(String K, List<String> V)</br>
+•         get(String K) – gets a list by its key</br></br>
  
  
-•         Create a java client that calls all the mentioned API methods
-•         Create a documentation explaining: how did you create the server + client, how to operate the client, what were your difficulties during the process
-•         Upload your project to github and send us the link
+•         Create a java client that calls all the mentioned API methods</br>
+•         Create a documentation explaining: how did you create the server + client, how to operate the client, what were your difficulties during the process</br>
+•         Upload your project to github and send us the link</br>
 •         The assignment will be written in java
 
 
@@ -42,12 +42,10 @@ Eventually, data Persisted to file-system while each key-value is written to dis
 That way, it is possible to append a single value to a single key without holding the entire store and also can get a key much faster
 depending on the file-system. The persisted data itself is human readable, which is always nice. 
 
-
-Difficulties during the process
--------------------------------
+##### Difficulties during the process
 - getting more familiar with different APIs and the principles behind them (e.g. Java NIO, sockets, threads).
 - understanding Netty framework architecture and its profits (e.g. multi-threaded event loop, flow of handlers in the pipeline).
-- choosing the ideal data structures  and locking mechanism with complexity and concurrency in mind.
+- choosing the ideal data structures and locking mechanism with complexity and concurrency in mind.
 
 
 How-to operate the client
