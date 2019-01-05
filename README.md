@@ -48,21 +48,19 @@ depending on the file-system. The persisted data itself is human readable, which
 - choosing the ideal data structures and locking mechanism with complexity and concurrency in mind.
 
 
-How-to operate the client
---------------------------
+##### How-to operate the client
 - Run Server class first and then Client.
 
 client gets single-line JSONs commands from console. Examples:
 
-{"command":"SET","key":"1","values":["b1","c1"]}
-{"command":"GET","key":"1"}
-{"command":"RIGHT_ADD","key":"1","values":["d1"]}
-{"command":"LEFT_ADD","key":"1","values":["a1"]}
+{"command":"SET","key":"1","values":["b1","c1"]}</br>
+{"command":"GET","key":"1"}</br>
+{"command":"RIGHT_ADD","key":"1","values":["d1"]}</br>
+{"command":"LEFT_ADD","key":"1","values":["a1"]}</br>
 {"command":"GET_ALL_KEYS","key":"1"}
 
 
- //TODO - some missing stuff and limitations
- --------------------------------------------
+##### TODO - some missing stuff and limitations
  - input validations (can use 64encoding to prevent file-naming conventions violations)
  - need better exception handling (Important! should flush all cache to disk in case of failure, for data integrity)
  - should write unit + integration tests (particular for different OSs due to the use in the file-system, currently tested on macOS only) 
