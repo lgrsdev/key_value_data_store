@@ -5,6 +5,7 @@ assignment
 Please implement a key-value data store server, which holds a list of values per key.
  
 •         The keys are from type string
+
 •         The values are a list of strings
 •         The server should accept connections via a custom (non HTTP) protocol over TCP
 •         The server should have persist the data into the file system
